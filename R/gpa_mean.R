@@ -19,7 +19,7 @@ GPAmean <- function(arraydata,mindist,maxit){
     tabruotate<-plyr::aaply(arraydata,3, function(A)procustemean(A,mean_start)$A)
     tabruotate=aperm(tabruotate,c(2,3,1))
     #str(tabruotate)
-    distanzainiz[cont]<-min(aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")))
+    distanzainiz[cont]<-min(plyr::aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")))
     #distanzainiz[cont]
     #str(tabruotate)
     mean_new <- compute_mean(tabruotate)
