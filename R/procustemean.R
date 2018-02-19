@@ -1,0 +1,30 @@
+#' @name procustemean
+#' @title Rotazione Procuste tramite matrice media
+#' @param A array of matrix
+#' @param B matrix of means
+#' @description The core of the GPAmean function
+
+procustemean<-function(A,B)
+{
+  n<-min(dim(dati)[1:2])-1
+  dati2<-A #inizializzo i dati
+  gam<-t(B)%*%dati2 
+  sv<-irlba::irlba(gam,nv = n,nu=n) #eseguo svd (meglio di svd)
+  # sv<-svd(gam)
+  # rm(gam)
+  u=as.matrix(sv$u)
+  v=t(as.matrix(sv$v))
+  R<-u%*%v #calcolo la matrice R
+  #str(R)
+  rm(sv)
+  tabruotate<-as.matrix(dati2%*%t(R)) #calcolo le nuove matrici ruotate
+  rm(gam)
+  #distprova[i]<-norm(out-xhat,type="F")^2
+  rm(dati2)
+  #str(distprova)
+  str(tabruotate)
+  # rm(beta)
+  gc()
+  return(list(A=tabruotate,R=R))
+}
+

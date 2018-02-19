@@ -1,0 +1,19 @@
+#' @title compute_beta
+#' @name compute_beta
+#' @description Estimate beta for normalized analisys
+#' @param R: matrix of reference
+#' @param gam: result of the svd
+#' @param dati: array of the number
+
+
+compute_beta<-function(R,gam,dati)
+{
+  numerator<-crossprod(as.vector(R),as.vector(gam))
+  denominator<-norm(dati,type="F")^2
+  beta<-numerator/denominator
+  beta<-as.numeric(beta)
+}
+
+
+
+
