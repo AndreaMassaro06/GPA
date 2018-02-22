@@ -7,7 +7,7 @@
 
 procustenorm<-function(A,B)
 {
-  n<-min(dim(dati)[1:2])-1
+  n<-min(dim(A)[1:2])-1
   dati2<-A #inizializzo i dati
   gam<-t(B)%*%dati2 
   sv<-rARPACK::svds(gam,n) #eseguo svd (meglio di svd)
