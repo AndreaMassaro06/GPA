@@ -17,7 +17,7 @@ GPAnorm<-function(arraydata,n,maxit,verbose=TRUE){
   while(cont<=maxit)
   {
     cont=cont+1
-    mean_star<-mean_new
+    mean_start<-mean_new
     tabruotate<-plyr::aaply(arraydata,3, function(A)procustenorm(A,mean_start)$A)
     tabruotate=aperm(tabruotate,c(2,3,1))
     distanzainiz[cont]<-sum(plyr::aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")^2))
