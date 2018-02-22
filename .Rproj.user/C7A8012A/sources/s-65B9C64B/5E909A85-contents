@@ -18,7 +18,7 @@ GPA<-function(arraydata,method=c("mean","norm"),maxit=10,mindist=1/100,n=NULL,ve
 {
   if(!is.array(arraydata))
   {
-    print("Insert an array of matrix.")
+    warning("Insert an array of matrix.")
   
     }else if(method=="mean" && (is.null(n) || is.numeric(n)) && (maxit>0 && is.numeric(maxit))&& (mindist>0 && is.numeric(mindist)))
   {
@@ -36,6 +36,6 @@ GPA<-function(arraydata,method=c("mean","norm"),maxit=10,mindist=1/100,n=NULL,ve
       
     }
   
-    else c("Invalid mathod")
+    else warning("Invalid mathod")
 }
 
