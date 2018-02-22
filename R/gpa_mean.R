@@ -6,20 +6,26 @@
 #'@description The function that calculate the new ruotate arrays using the mean
 
 
-GPAmean <- function(arraydata,mindist,maxit){
-  distanzainiz<-0
+GPAmean <- function(arraydata,mindist,maxit,verbose=TRUE){
   cont <- 1
-  dist2<-mindist+1
+  dist2<- Inf
   distanze<-0 #creo una variabile che mi tiene le misure delle distanze
   
-  mean_start<-compute_mean(arraydata)
+  mean_new<-compute_mean(arraydata)
+  distanzainiz<-sum(plyr::aaply(arraydata,3,function(x)norm(x-mean_new,type="F")))
+  
+  
+  if(verbose) cat("\n distanza iniziale:",distanzainiz[cont],"\n")
   
   while(dist2>mindist && cont<=maxit)
   {
+    cont=cont+1
+    mean_start<-mean_new
+    
     tabruotate<-plyr::aaply(arraydata,3, function(A)procustemean(A,mean_start)$A)
     tabruotate=aperm(tabruotate,c(2,3,1))
     #str(tabruotate)
-    distanzainiz[cont]<-min(plyr::aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")))
+    distanzainiz[cont]<-sum(plyr::aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")))
     #distanzainiz[cont]
     #str(tabruotate)
     mean_new <- compute_mean(tabruotate)
@@ -28,17 +34,15 @@ GPAmean <- function(arraydata,mindist,maxit){
     #str(mean_start2)
     
     #calcolo la nuova distanza con la norma di Frobenius
-    dist2=norm(mean_new-mean_start,type="F")
-    distanze[cont]<-dist2
+    # dist2=norm(mean_new-mean_start,type="F")
+    # distanze[cont]<-dist2
+    dist2=(distanzainiz[cont-1]-distanzainiz[cont])/distanzainiz[cont]
     
-    
-    cat("\n fine ciclo di iterazione numero:",cont,"\n distanza iniziale:",distanzainiz[cont],"\n nuova distanza:",dist2,"\n")
-    
-    cont=cont+1
-    mean_start=mean_new
+    if(verbose) cat("\n fine ciclo di iterazione numero:",cont,"\n nuova distanza:",distanzainiz[cont],"\n")
     
     #rm(dist2)
     gc()
   }
-  list(Aarray=tabruotate,mean=mean_start_new)
+  distanzainiz=distanzainiz[-1]
+  list(Aarray=tabruotate,mean=mean_start,epsilons=distanzainiz)
 }

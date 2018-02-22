@@ -4,10 +4,12 @@
 \alias{GPA}
 \title{Generilazed Procustes Analysis}
 \usage{
-GPA(arraydata, method = c("mean", "norm"), maxit = 10, mindist = 1,
-  n = NULL)
+GPA(arraydata, method = c("mean", "norm"), maxit = 10, mindist = 1/100,
+  n = NULL, verbose = TRUE)
 }
 \arguments{
+\item{verbose}{TRUE}
+
 \item{arraydata:}{array of data whit nrow,ncolum and the number of the matrix.}
 
 \item{method:}{select a method for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
@@ -21,4 +23,9 @@ GPA(arraydata, method = c("mean", "norm"), maxit = 10, mindist = 1,
 }
 \description{
 The function that calculate the new ruotate arrays
+}
+\examples{
+arraydata=array(rnorm(10*50*4),c(10,50,4))
+res=GPA(arraydata)
+plot(res$epsilons,type="l")
 }
