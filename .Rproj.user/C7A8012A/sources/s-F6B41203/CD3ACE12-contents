@@ -24,7 +24,7 @@ procustenorm<-function(A,B)
   #distprova[i]<-norm(out-xhat,type="F")^2
   rm(dati2)
   #str(distprova)
-  str(tabruotate)
+  #str(tabruotate)
   # rm(beta)
   gc()
   return(list(A=tabruotate,R=R,beta=beta))

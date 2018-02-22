@@ -4,7 +4,7 @@
 \alias{GPAnorm}
 \title{GPAnorm}
 \usage{
-GPAnorm(arraydata, n, maxit)
+GPAnorm(arraydata, n, maxit, verbose = TRUE)
 }
 \arguments{
 \item{arraydata}{: array with the matrix of dates}
