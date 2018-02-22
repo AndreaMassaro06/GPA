@@ -38,7 +38,7 @@ GPAnorm<-function(arraydata,n,maxit,verbose=TRUE){
     #distanze[cont]<-dist2
     
     
-    if(verbose) cat("\n fine ciclo di iterazione numero:",cont,"\n nuova distanza:",distanzainiz[cont],"\n")
+    if(verbose) cat("\n fine ciclo di iterazione numero:",cont-1,"\n nuova distanza:",distanzainiz[cont],"\n")
     
     
     mean_new=compute_norm(mean_start_new)
