@@ -47,5 +47,5 @@ GPAnorm<-function(arraydata,n,maxit,verbose=TRUE){
     gc()
   }
   distanzainiz<-distanzainiz[-1]
-  list(Aarray=tabruotate,mean=mean_start_new,distance=distanzainiz)
+  list(Aarray=tabruotate,mean=mean_start,distance=distanzainiz)
 }
