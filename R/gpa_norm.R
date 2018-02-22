@@ -14,6 +14,8 @@ GPAnorm<-function(arraydata,n,maxit,verbose=TRUE){
   mean_start_0<-mean_new
   distanzainiz<-sum(plyr::aaply(arraydata,3,function(x)norm(x-mean_new,type="F")^2))
   
+  if(verbose) cat("\n distanza iniziale:",distanzainiz[cont],"\n")
+  
   while(cont<=maxit)
   {
     cont=cont+1
