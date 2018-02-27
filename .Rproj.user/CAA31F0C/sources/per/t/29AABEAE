@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519551129895.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "215900512",
+    "id" : "29AABEAE",
+    "lastKnownWriteTime" : 1519319564,
+    "last_content_update" : 1519319564,
+    "path" : "C:/Users/Lisa/Desktop/GPA/R/GPA.R",
+    "project_path" : "R/GPA.R",
+    "properties" : {
+        "cursorPosition" : "40,0",
+        "scrollLine" : "23"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,54 @@
+#'@title GPAnorm
+#'@name GPAnorm
+#'@param arraydata : array with the matrix of dates
+#'@param n: selection of the matrix for calculate the norm
+#'@param maxit: maximum number of the iteration
+#'@description The function that calculate the new ruotate arrays whit the normalizzed matrix
+
+
+GPAnorm<-function(arraydata,n,maxit,verbose=TRUE){
+  cont <- 1
+  distanze<-0 #creo una variabile che mi tiene le misure delle distanze
+  matrice<-arraydata[,,n]
+  mean_new<- compute_norm(matrice)
+  mean_start_0<-mean_new
+  distanzainiz<-sum(plyr::aaply(arraydata,3,function(x)norm(x-mean_new,type="F")^2))
+  
+  if(verbose) cat("\n distanza iniziale:",distanzainiz[cont],"\n")
+  
+  while(cont<=maxit)
+  {
+    cont=cont+1
+    mean_start<-mean_new
+    rm(mean_new)
+    tabruotate<-plyr::aaply(arraydata,3, function(A)procustenorm(A,mean_start)$A)
+    tabruotate=aperm(tabruotate,c(2,3,1))
+    distanzainiz[cont]<-sum(plyr::aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")^2))
+    #str(tabruotate)
+    #distanzainiz[cont]
+    #str(tabruotate)
+    mean_new <- compute_mean(tabruotate)
+    #str(mean_start2)
+    #mean_start2=as.matrix(mean_start2)
+    #str(mean_start2)
+    
+    #Calcolo gamma di mean_start2
+    
+    mean_start_new<-procustenorm(mean_new,mean_start_0)$A
+    
+    #calcolo la nuova distanza con la norma di Frobenius
+    #dist2=norm(mean_start_new-mean_start_0,type="F")^2
+    #distanze[cont]<-dist2
+    
+    
+    if(verbose) cat("\n fine ciclo di iterazione numero:",cont-1,"\n nuova distanza:",distanzainiz[cont],"\n")
+    
+    
+    mean_new=compute_norm(mean_start_new)
+    rm(mean_start_new)
+    #rm(dist2)
+    gc()
+  }
+  distanzainiz<-distanzainiz[-1]
+  list(Aarray=tabruotate,mean=mean_start,distance=distanzainiz)
+}

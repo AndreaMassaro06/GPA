@@ -20,12 +20,12 @@ procustenorm<-function(A,B)
   rm(sv)
   beta<-compute_beta(R,gam,dati2)
   tabruotate<-as.matrix(beta*dati2%*%t(R)) #calcolo le nuove matrici ruotate
-  rm(gam)
+  rm(gam,R,beta)
   #distprova[i]<-norm(out-xhat,type="F")^2
   rm(dati2)
   #str(distprova)
   #str(tabruotate)
   # rm(beta)
   gc()
-  return(list(A=tabruotate,R=R,beta=beta))
+  return(list(A=tabruotate))
 }

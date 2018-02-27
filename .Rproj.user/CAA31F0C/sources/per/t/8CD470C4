@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519550821473.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4190014229",
+    "id" : "8CD470C4",
+    "lastKnownWriteTime" : 1519550943,
+    "last_content_update" : 1519550943605,
+    "path" : "C:/Users/Lisa/Desktop/GPA/R/procustemean.R",
+    "project_path" : "R/procustemean.R",
+    "properties" : {
+        "cursorPosition" : "28,0",
+        "scrollLine" : "10"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

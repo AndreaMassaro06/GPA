@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519553279789.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4237286770",
+    "id" : "594EA44E",
+    "lastKnownWriteTime" : 1519554449,
+    "last_content_update" : 1519554449758,
+    "path" : "C:/Users/Lisa/Desktop/GPA/R/gpa_norm.R",
+    "project_path" : "R/gpa_norm.R",
+    "properties" : {
+        "cursorPosition" : "54,0",
+        "scrollLine" : "35"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

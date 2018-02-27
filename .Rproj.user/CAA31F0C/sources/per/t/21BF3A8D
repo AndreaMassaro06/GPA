@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519550794790.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "480875490",
+    "id" : "21BF3A8D",
+    "lastKnownWriteTime" : 1519554425,
+    "last_content_update" : 1519554425144,
+    "path" : "C:/Users/Lisa/Desktop/GPA/R/procustenorm.R",
+    "project_path" : "R/procustenorm.R",
+    "properties" : {
+        "cursorPosition" : "31,0",
+        "scrollLine" : "12"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519550815684.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1543509289",
+    "id" : "820F9397",
+    "lastKnownWriteTime" : 1519551091,
+    "last_content_update" : 1519551091960,
+    "path" : "C:/Users/Lisa/Desktop/GPA/R/gpa_mean.R",
+    "project_path" : "R/gpa_mean.R",
+    "properties" : {
+        "cursorPosition" : "48,0",
+        "scrollLine" : "29"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
