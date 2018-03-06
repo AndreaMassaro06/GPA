@@ -1,12 +1,13 @@
 #'@name GPA
 #'@title Generilazed Procustes Analysis
 #'@param arraydata: array of data whit nrow,ncolum and the number of the matrix.
-#'@param starting_point: select a method for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
+#'@param starting_point: select a starting_point for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
 #'"matrix" used a matrix of array, selected with the parameter n, for centrate the array of date.
 #'@param maxit: maximum number of iteration inside the GPA funtion (default maxit=10).
 #'@param mindist: select the minimum distance between the matrix (default mindist=1).
-#'@param n: select the matrix to normalized for method "norm". It must be used into method "norm" (default n=NULL).
+#'@param n: select the matrix for starting_point "matrix". It must be used into starting_point "norm" (default n=NULL).
 #'@param verbose TRUE
+#'@param normalization: Procuste distance with scaling (default FALSE)
 #'@description The function that calculate the new ruotate arrays
 #'@export
 #'@examples
@@ -20,22 +21,21 @@ GPA<-function(arraydata,starting_point=c("mean","matrix"),maxit=10,mindist=1/100
   {
     warning("Insert an array of matrix.")
   
-    }else if(method=="mean" && (is.null(n) || is.numeric(n)) && (maxit>0 && is.numeric(maxit))&& (mindist>0 && is.numeric(mindist)))
+    }else if(starting_point=="mean" && (is.null(n) || is.numeric(n)) && (maxit>0 && is.numeric(maxit))&& (mindist>0 && is.numeric(mindist)))
   {
       n<-NULL
       GPAmean(arraydata,mindist,maxit,verbose=verbose,normalization=normalization)
       
-    } else if(method=="matrix" && (!is.null(n) && n>0 && n<=(dim(arraydata)[3])) && (maxit>0 && is.numeric(maxit))) {
+    } else if(starting_point=="matrix" && (!is.null(n) && n>0 && n<=(dim(arraydata)[3])) && (maxit>0 && is.numeric(maxit))&& (mindist>0 && is.numeric(mindist))) {
       
-      mindist<-NULL
-      GPAnorm(arraydata,n,maxit=10,verbose=verbose,normalization=normalization)
+      GPAnorm(arraydata,n,maxit=10,mindist,verbose=verbose,normalization=normalization)
       
-    } else if(method=="matrix" && (is.null(n)|| n<=0  || !is.numeric(n)||n>=(dim(arraydata)[3]))){
+    } else if(starting_point=="matrix" && (is.null(n)|| n<=0  || !is.numeric(n)||n>=(dim(arraydata)[3]))){
       
-      warning("Insert an acceptable n value for method norm.")
+      warning("Insert an acceptable n value for use matrix as starting point.")
       
     }
   
-    else warning("Invalid mathod")
+    else warning("Invalid starting point")
 }
 

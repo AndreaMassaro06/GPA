@@ -7,6 +7,7 @@
 #'@param mindist: select the minimum distance between the matrix (default mindist=1).
 #'@param n: select the matrix for starting_point "matrix". It must be used into starting_point "norm" (default n=NULL).
 #'@param verbose TRUE
+#'@param normalization: Procuste distance with scaling (default FALSE)
 #'@description The function that calculate the new ruotate arrays
 #'@export
 #'@examples

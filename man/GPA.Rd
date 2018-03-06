@@ -20,6 +20,8 @@ GPA(arraydata, starting_point = c("mean", "matrix"), maxit = 10,
 \item{mindist:}{select the minimum distance between the matrix (default mindist=1).}
 
 \item{n:}{select the matrix for starting_point "matrix". It must be used into starting_point "norm" (default n=NULL).}
+
+\item{normalization:}{Procuste distance with scaling (default FALSE)}
 }
 \description{
 The function that calculate the new ruotate arrays
