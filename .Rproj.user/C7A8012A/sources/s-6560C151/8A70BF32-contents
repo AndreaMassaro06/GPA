@@ -25,10 +25,9 @@ GPA<-function(arraydata,starting_point=c("mean","matrix"),maxit=10,mindist=1/100
       n<-NULL
       GPAmean(arraydata,mindist,maxit,verbose=verbose,normalization=normalization)
       
-    } else if(starting_point=="matrix" && (!is.null(n) && n>0 && n<=(dim(arraydata)[3])) && (maxit>0 && is.numeric(maxit))) {
+    } else if(starting_point=="matrix" && (!is.null(n) && n>0 && n<=(dim(arraydata)[3])) && (maxit>0 && is.numeric(maxit))&& (mindist>0 && is.numeric(mindist))) {
       
-      mindist<-NULL
-      GPAnorm(arraydata,n,maxit=10,verbose=verbose,normalization=normalization)
+      GPAnorm(arraydata,n,maxit=10,mindist,verbose=verbose,normalization=normalization)
       
     } else if(starting_point=="matrix" && (is.null(n)|| n<=0  || !is.numeric(n)||n>=(dim(arraydata)[3]))){
       
