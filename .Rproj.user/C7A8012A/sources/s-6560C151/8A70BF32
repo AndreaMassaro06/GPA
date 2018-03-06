@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1519319542351.000,
+    "created" : 1520336546577.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "215900512",
-    "id" : "502BEE15",
-    "lastKnownWriteTime" : 1519319563,
-    "last_content_update" : 1519319563838,
+    "hash" : "2086678772",
+    "id" : "8A70BF32",
+    "lastKnownWriteTime" : 1520338835,
+    "last_content_update" : 1520338835504,
     "path" : "C:/Users/saro9/Google Drive/STAGE/Roba mia/GPA/R/GPA.R",
     "project_path" : "R/GPA.R",
     "properties" : {
-        "cursorPosition" : "30,50",
-        "scrollLine" : "0"
+        "cursorPosition" : "34,76",
+        "scrollLine" : "10"
     },
-    "relative_order" : 3,
+    "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

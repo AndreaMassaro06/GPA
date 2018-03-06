@@ -4,16 +4,16 @@
 \alias{GPA}
 \title{Generilazed Procustes Analysis}
 \usage{
-GPA(arraydata, method = c("mean", "norm"), maxit = 10, mindist = 1/100,
-  n = NULL, verbose = TRUE)
+GPA(arraydata, starting_point = c("mean", "matrix"), maxit = 10,
+  mindist = 1/100, n = NULL, verbose = TRUE, normalization = FALSE)
 }
 \arguments{
 \item{verbose}{TRUE}
 
 \item{arraydata:}{array of data whit nrow,ncolum and the number of the matrix.}
 
-\item{method:}{select a method for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
-"norm" used a normalized matrix of array, selected with the parameter n, for centrate the array of date.}
+\item{starting_point:}{select a method for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
+"matrix" used a matrix of array, selected with the parameter n, for centrate the array of date.}
 
 \item{maxit:}{maximum number of iteration inside the GPA funtion (default maxit=10).}
 

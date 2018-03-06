@@ -4,7 +4,7 @@
 \alias{GPAmean}
 \title{GPAmean}
 \usage{
-GPAmean(arraydata, mindist, maxit, verbose = TRUE)
+GPAmean(arraydata, mindist, maxit, verbose = TRUE, normalization = FALSE)
 }
 \arguments{
 \item{arraydata}{:initial array where i want to apply gpa}
