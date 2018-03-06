@@ -56,8 +56,11 @@ GPAnorm<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
     if(verbose) cat("\n fine ciclo di iterazione numero:",cont-1,"\n nuova distanza:",distanzainiz[cont],"\n")
     
     
-    if(normalization)mean_new=compute_norm(mean_start_new)
+    if(normalization)
+      {
+    mean_new=compute_norm(mean_start_new)
     rm(mean_start_new)
+    }
     #rm(dist2)
     gc()
   }
