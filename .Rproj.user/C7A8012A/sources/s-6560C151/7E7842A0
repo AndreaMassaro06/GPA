@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "406038007",
+    "hash" : "0",
     "id" : "7E7842A0",
     "lastKnownWriteTime" : 1520338724,
     "last_content_update" : 1520338724736,
     "path" : "C:/Users/saro9/Google Drive/STAGE/Roba mia/GPA/R/gpa_mean.R",
     "project_path" : "R/gpa_mean.R",
     "properties" : {
-        "cursorPosition" : "52,12",
-        "scrollLine" : "27"
+        "cursorPosition" : "25,15",
+        "scrollLine" : "8"
     },
     "relative_order" : 2,
     "source_on_save" : false,

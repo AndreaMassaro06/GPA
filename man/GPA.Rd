@@ -12,14 +12,14 @@ GPA(arraydata, starting_point = c("mean", "matrix"), maxit = 10,
 
 \item{arraydata:}{array of data whit nrow,ncolum and the number of the matrix.}
 
-\item{starting_point:}{select a method for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
+\item{starting_point:}{select a starting_point for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
 "matrix" used a matrix of array, selected with the parameter n, for centrate the array of date.}
 
 \item{maxit:}{maximum number of iteration inside the GPA funtion (default maxit=10).}
 
 \item{mindist:}{select the minimum distance between the matrix (default mindist=1).}
 
-\item{n:}{select the matrix to normalized for method "norm". It must be used into method "norm" (default n=NULL).}
+\item{n:}{select the matrix for starting_point "matrix". It must be used into starting_point "norm" (default n=NULL).}
 }
 \description{
 The function that calculate the new ruotate arrays
