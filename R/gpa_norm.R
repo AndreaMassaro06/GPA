@@ -1,11 +1,3 @@
-#'@title GPAnorm
-#'@name GPAnorm
-#'@param arraydata : array with the matrix of dates
-#'@param n: selection of the matrix for calculate the norm
-#'@param maxit: maximum number of the iteration
-#'@description The function that calculate the new ruotate arrays whit the normalizzed matrix
-
-
 GPAnorm<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
   cont <- 1
   dist2<-Inf

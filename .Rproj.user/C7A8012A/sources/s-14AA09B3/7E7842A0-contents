@@ -1,11 +1,3 @@
-#'@title GPAmean
-#'@name GPAmean
-#'@param arraydata :initial array where i want to apply gpa
-#'@param mindist: the minimal distace beetwen the matrix inside the array
-#'@param maxit: maximum number of iteration
-#'@description The function that calculate the new ruotate arrays using the mean
-
-
 GPAmean <- function(arraydata,mindist,maxit,verbose=TRUE,normalization=FALSE){
   cont <- 1
   dist2<- Inf

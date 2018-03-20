@@ -1,10 +1,3 @@
-#' @name procustenorm 
-#' @title Rotazione Procuste tramite matrice normalizzata
-#' @param A array of matrix
-#' @param B normalizzed matrix
-#' @description The core of the GPA function
- 
-
 procustenorm<-function(A,B)
 {
   n<-min(dim(A)[1:2])-1

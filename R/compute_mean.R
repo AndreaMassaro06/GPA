@@ -1,9 +1,3 @@
-#' @title compute_mean
-#' @name compute_mean
-#' @param arraydata: array of data 
-#' @description Estimate the mean of the array
-
-
 compute_mean <- function(arraydata)
   {
     somma<-arraydata[,,1]

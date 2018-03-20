@@ -1,9 +1,3 @@
-#' @name procustemean
-#' @title Rotazione Procuste tramite matrice media
-#' @param A array of matrix
-#' @param B matrix of means
-#' @description The core of the GPAmean function
-
 procustemean<-function(A,B)
 {
   n<-min(dim(A)[1:2])-1
