@@ -5,7 +5,7 @@ GPAmean <- function(arraydata,mindist,maxit,verbose=TRUE,normalization=FALSE){
   if(normalization)
   {
     arraydata<-plyr::aaply(arraydata,2,function(x)scale(x,scale = FALSE))
-    arraydata=aperm(arraydata,c(2,1,3))
+    arraydata<-aperm(arraydata,c(2,1,3))
     mean_1<-compute_mean(arraydata)
     mean_new<-compute_norm(mean_1)
     mean_start_0<-mean_new
