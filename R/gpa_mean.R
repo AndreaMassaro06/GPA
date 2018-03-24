@@ -4,9 +4,9 @@ GPAmean <- function(arraydata,mindist,maxit,verbose=TRUE,normalization=FALSE){
   distanze<-0 #creo una variabile che mi tiene le misure delle distanze
   if(normalization)
   {
-    arraycenter<-array(NA,dim = c(dim(arraydata)[1],dim(arraydata)[2],dim(arraydata)[3]))
-    arraycenter<-plyr::aaply(arraydata,2,function(x)scale(x,scale = FALSE))
-    mean_1<-compute_mean(arraycenter)
+    arraydata<-plyr::aaply(arraydata,2,function(x)scale(x,scale = FALSE))
+    arraydata=aperm(arraydata,c(2,1,3))
+    mean_1<-compute_mean(arraydata)
     mean_new<-compute_norm(mean_1)
     mean_start_0<-mean_new
   }else mean_new<-compute_mean(arraydata)
