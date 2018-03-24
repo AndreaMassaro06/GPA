@@ -1,9 +1,12 @@
 Package: GPA
+Type:Package
 Version: 0.1
 Date: 2015-17-11
 Title: Generalized Procustes Analisys
 Author: Andrea Massaro <andrea.massaro.2@studenti.unipd.it>
+        Livio Finos <livio.finos@unipd.it>
 Maintainer: Andrea Massaro <andrea.massaro.2@studenti.unipd.it>
+Depends:plyr,irlba,rARPACK
 Description: The package was created to perform Generalized Procustes Analysis on a 3D array of data.
 License: GPL (>= 2)
 RoxygenNote: 6.0.1
