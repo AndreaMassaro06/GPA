@@ -2,7 +2,7 @@
 #'@title Generilazed Procustes Analysis
 #'@param arraydata: array of data whit nrow,ncolum and the number of the matrix.
 #'@param starting_point: select a starting_point for calculate GPA. "mean" used the matrix of mean for centrate the array of date.
-#'"matrix" used a matrix of array, selected with the parameter n, for centrate the array of date.
+#'"matrix" used a matrix of array, selected with the parameter n, for centrate the array of data.
 #'@param maxit: maximum number of iteration inside the GPA funtion (default maxit=10).
 #'@param mindist: select the minimum distance between the matrix (default mindist=1).
 #'@param n: select the matrix for starting_point "matrix". It must be used into starting_point "norm" (default n=NULL).
@@ -28,7 +28,7 @@ GPA<-function(arraydata,starting_point=c("mean","matrix"),maxit=10,mindist=1/100
       
     } else if(starting_point=="matrix" && (!is.null(n) && n>0 && n<=(dim(arraydata)[3])) && (maxit>0 && is.numeric(maxit))&& (mindist>0 && is.numeric(mindist))) {
       
-      GPAnorm(arraydata,n,maxit=10,mindist,verbose=verbose,normalization=normalization)
+      GPAmatr(arraydata,n,maxit=10,mindist,verbose=verbose,normalization=normalization)
       
     } else if(starting_point=="matrix" && (is.null(n)|| n<=0  || !is.numeric(n)||n>=(dim(arraydata)[3]))){
       
