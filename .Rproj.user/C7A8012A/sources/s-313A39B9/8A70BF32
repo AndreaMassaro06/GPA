@@ -5,7 +5,7 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "962148566",
+    "hash" : "0",
     "id" : "8A70BF32",
     "lastKnownWriteTime" : 1522077359,
     "last_content_update" : 1522077359151,
@@ -13,7 +13,7 @@
     "project_path" : "R/GPA.R",
     "properties" : {
         "cursorPosition" : "41,0",
-        "scrollLine" : "13"
+        "scrollLine" : "9"
     },
     "relative_order" : 1,
     "source_on_save" : false,

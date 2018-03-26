@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1111288400",
+    "hash" : "2457989620",
     "id" : "C28E05B2",
-    "lastKnownWriteTime" : 1522078093,
-    "last_content_update" : 1522078093423,
+    "lastKnownWriteTime" : 1522085662,
+    "last_content_update" : 1522085662504,
     "path" : "C:/Users/saro9/Google Drive/STAGE/Roba mia/GPA/R/gpa_norm.R",
     "project_path" : "R/gpa_norm.R",
     "properties" : {
-        "cursorPosition" : "13,2",
-        "scrollLine" : "0"
+        "cursorPosition" : "57,5",
+        "scrollLine" : "33"
     },
     "relative_order" : 3,
     "source_on_save" : false,
