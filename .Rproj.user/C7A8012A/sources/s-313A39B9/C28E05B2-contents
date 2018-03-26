@@ -9,8 +9,11 @@ GPAmatr<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
   arraydata<-aperm(arraydata,c(2,1,3))  
   mean_new<- compute_norm(matrice)
   mean_start_0<-mean_new
-  }else mean_new<-matrice
+  }else 
+  {
+  mean_new<-matrice
   mean_start_0<-mean_new
+  }
   
   distanzainiz<-sum(plyr::aaply(arraydata,3,function(x)norm(x-mean_new,type="F")^2))
   
@@ -40,7 +43,7 @@ GPAmatr<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
     if(normalization)
     {
     mean_start_new<-procustenorm(mean_new,mean_start_0)$A
-    }
+    }else mean_start_new<-procustemean(mean_new,mean_start_0)$A
     #calcolo la nuova distanza con la norma di Frobenius
     #dist2=norm(mean_start_new-mean_start_0,type="F")^2
     #distanze[cont]<-dist2
@@ -55,6 +58,10 @@ GPAmatr<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
       {
     mean_new=compute_norm(mean_start_new)
     rm(mean_start_new)
+    }else 
+    {
+      mean_new<-mean_start_new
+      rm(mean_start_new)
     }
     #rm(dist2)
     gc()
