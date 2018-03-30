@@ -48,7 +48,7 @@ GPAmatr<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
     #dist2=norm(mean_start_new-mean_start_0,type="F")^2
     #distanze[cont]<-dist2
     
-    dist2=(distanzainiz[cont-1]-distanzainiz[cont])/distanzainiz[cont]
+    dist2=abs((distanzainiz[cont-1]-distanzainiz[cont])/distanzainiz[cont])
     
     
     if(verbose) cat("\n fine ciclo di iterazione numero:",cont-1,"\n nuova distanza:",distanzainiz[cont],"\n")
