@@ -12,7 +12,7 @@ GPAmatr<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
   }else 
   {
   mean_new<-matrice
-  mean_start_0<-mean_new
+  mean_start_0<-matrice
   }
   
   distanzainiz<-sum(plyr::aaply(arraydata,3,function(x)norm(x-mean_new,type="F")^2))
@@ -27,8 +27,8 @@ GPAmatr<-function(arraydata,n,maxit,mindist,verbose=TRUE,normalization=FALSE){
     if(normalization)
     {
       tabruotate<-plyr::aaply(arraydata,3, function(A)procustenorm(A,mean_start)$A)
-    }
-    else tabruotate<-plyr::aaply(arraydata,3, function(A)procustemean(A,mean_start)$A)
+    }else tabruotate<-plyr::aaply(arraydata,3, function(A)procustemean(A,mean_start)$A)
+    
     tabruotate=aperm(tabruotate,c(2,3,1))
     distanzainiz[cont]<-sum(plyr::aaply(tabruotate,3,function(x)norm(x-mean_start,type="F")^2))
     #str(tabruotate)
